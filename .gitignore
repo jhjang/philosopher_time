@@ -12,8 +12,8 @@
 001.Source.Rails/pickle-email-*.html
 
 # TODO Comment out these rules if you are OK with secrets being uploaded to the repo
-001.Source.Rails/config/initializers/secret_token.rb
-001.Source.Rails/config/secrets.yml
+#001.Source.Rails/config/initializers/secret_token.rb
+#001.Source.Rails/config/secrets.yml
 
 ## Environment normalisation:
 001.Source.Rails/.bundle
