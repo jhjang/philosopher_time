@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Philosopher Time :: API</title>
+    <link href="/assets/bootstrap.css?body=1" media="all" rel="stylesheet" />
+    <link href="/assets/api.css" media="all" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="main-wrapper">
+      <!-- content area -->
+      <div id="content-wrapper" class="width_50_percent">
+        <h4>기기</h4>
+        <ul>
+          <li><a href="./api/devices/register.html">등록 POST /devices/</a></li>
+        </ul>
+      </div>
+
+      <div id="content-wrapper" class="width_50_percent" style="margin-top:40px;">
+        <h4>노트</h4>
+        <ul>
+          <li><a href="./api/notes/register.html">등록 POST /notes</a></li>
+        </ul>
+        <ul>
+          <li><a href="./api/notes/all_list.html">조회-전체 GET /notes/</a></li>
+        </ul>
+        <ul>
+          <li><a href="./api/notes/my_list.html">조회-내것 GET /notes/:uuid</a></li>
+        </ul>
+      </div>
+      <!-- end of content area -->
+    </div>
+  </body>
+</html>

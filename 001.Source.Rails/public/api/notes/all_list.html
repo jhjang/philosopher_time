@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>API::조회-전체</title>
+  <link href="/assets/bootstrap.css?body=1" media="all" rel="stylesheet" />
+  <link href="/assets/api.css" media="all" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="main-wrapper">
+    <!-- content area -->
+    <div id="content-wrapper">
+      <h4 class="font_important">조회-전체(최대 50)</h4>
+      <h5 class="font_important">GET /notes</h5>
+
+      <!-- form -->
+      <div class="col-sm-6 margin_top_30">
+        <span class="font_warning">*</span> 필수 항목
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8">
+              <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- end of form -->
+
+      <div class="clear"></div>
+      <!-- result -->
+      <div class="col-sm-6 margin_top_30">
+        <h4 class="font_important">결과</h4>
+        <div id="result"></div>
+      </div>
+      <!-- end of result -->
+    </div>
+    <!-- end of content area -->
+  </div>
+
+  <script type="text/javascript" language="javascript">
+    $('#content-wrapper').on('submit', 'form', function(e) {
+      var data = $('form').serialize();
+      var url = "/notes";
+
+      $.ajax({
+        type: "get",
+        url: url,
+        data: data,
+        dataType: "json",
+        success: function(result) {
+          $("#result").html(JSON.stringify(result));
+        },
+        error: function() {
+          alert('error occurs');
+        }
+      });
+      return false;
+    });
+  </script>
+</body>
+</html>
